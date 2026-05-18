@@ -145,6 +145,10 @@ class _MemoryGamePageState extends State<MemoryGamePage> {
     MemoryCard(imagePath: 'assets/images/orange_diamond.png'),
     MemoryCard(imagePath: 'assets/images/purple_star.png'),
     MemoryCard(imagePath: 'assets/images/pink_heart.png'),
+    MemoryCard(imagePath: 'assets/images/yellow_hexagon.png'),
+    MemoryCard(imagePath: 'assets/images/cyan_oval.png'),
+    MemoryCard(imagePath: 'assets/images/brown_pentagon.png'),
+    MemoryCard(imagePath: 'assets/images/teal_cross.png'),
   ];
 
   @override
@@ -402,7 +406,7 @@ class _MemoryGamePageState extends State<MemoryGamePage> {
               child: GridView.builder(
                 itemCount: cards.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
+                  crossAxisCount: 4,
                   crossAxisSpacing: 14,
                   mainAxisSpacing: 14,
                 ),
