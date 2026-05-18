@@ -14,7 +14,7 @@ class MemoryMatchApp extends StatelessWidget {
       title: 'Memory Matching Game',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
         useMaterial3: true,
       ),
       home: const WelcomePage(),
@@ -33,8 +33,8 @@ class WelcomePage extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Colors.deepPurple.shade700,
-              Colors.deepPurple.shade200,
+              Colors.lightBlue.shade700,
+              Colors.lightBlue.shade200,
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -46,10 +46,9 @@ class WelcomePage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(
-                  Icons.extension,
-                  size: 90,
-                  color: Colors.white,
+                Image.asset(
+                  'assets/images/shapes.png',
+                  height: 120,
                 ),
                 const SizedBox(height: 24),
                 const Text(
@@ -84,7 +83,7 @@ class WelcomePage extends StatelessWidget {
                   label: const Text('Start Game'),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
-                    foregroundColor: Colors.deepPurple,
+                    foregroundColor: Colors.lightBlue,
                     elevation: 6,
                     padding: const EdgeInsets.symmetric(
                       horizontal: 36,
@@ -290,7 +289,7 @@ class _MemoryGamePageState extends State<MemoryGamePage> {
         decoration: BoxDecoration(
           color: card.isFlipped || card.isMatched
               ? Colors.white
-              : Colors.deepPurple.shade300,
+              : Colors.lightBlue.shade300,
           borderRadius: BorderRadius.circular(24),
           boxShadow: [
             BoxShadow(
@@ -330,14 +329,14 @@ class _MemoryGamePageState extends State<MemoryGamePage> {
       appBar: AppBar(
         title: const Text('Memory Matching Game'),
         centerTitle: true,
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.lightBlue,
         foregroundColor: Colors.white,
       ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Colors.deepPurple.shade50,
+              Colors.lightBlue.shade50,
               Colors.white,
             ],
             begin: Alignment.topCenter,
@@ -394,7 +393,7 @@ class _MemoryGamePageState extends State<MemoryGamePage> {
                       style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
-                        color: Colors.deepPurple,
+                        color: Colors.lightBlue,
                       ),
                     ),
                   ],
@@ -439,7 +438,7 @@ class _MemoryGamePageState extends State<MemoryGamePage> {
                     icon: const Icon(Icons.restart_alt),
                     label: const Text('Restart'),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.deepPurple,
+                      backgroundColor: Colors.lightBlue,
                       foregroundColor: Colors.white,
                       padding: const EdgeInsets.symmetric(vertical: 14),
                       textStyle: const TextStyle(fontSize: 18),
